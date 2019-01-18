@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BC4BABC-2361-4B30-A317-9823E41C53B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMS</RootNamespace>
+    <AssemblyName>RMS_UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Com.cs" />
+    <Compile Include="Common\EnumEditOp.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BookInfoStatisticsUI\Frm_BookInfoStatistics_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BookInfoStatisticsUI\Frm_BookInfoStatistics_UI.Designer.cs">
+      <DependentUpon>Frm_BookInfoStatistics_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\ContactManagerUI\CardInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\ContactManagerUI\CardInfo.designer.cs">
+      <DependentUpon>CardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\DairyManagerUI\Frm_DairyInfoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\DairyManagerUI\Frm_DairyInfoManager.Designer.cs">
+      <DependentUpon>Frm_DairyInfoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_BulkImportMatInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_BulkImportMatInfo.Designer.cs">
+      <DependentUpon>Frm_BulkImportMatInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_ChangeCoulumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_ChangeCoulumn.Designer.cs">
+      <DependentUpon>Frm_ChangeCoulumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BorrowHostory_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BorrowHostory_UI.Designer.cs">
+      <DependentUpon>BorrowHostory_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BorrowManager_UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BorrowManager_UI.Designer.cs">
+      <DependentUpon>BorrowManager_UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_MatTypeAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_MatTypeAlter.Designer.cs">
+      <DependentUpon>Frm_MatTypeAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_BookInfoEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_BookInfoEdit.Designer.cs">
+      <DependentUpon>Frm_BookInfoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_BookInfoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_BookInfoManager.Designer.cs">
+      <DependentUpon>Frm_BookInfoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonTypeManager.designer.cs">
+      <DependentUpon>Frm_PersonTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RMS_UI\Frm_PersonInfoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonInfoAdd.Designer.cs">
+      <DependentUpon>Frm_PersonInfoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonInfoAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonInfoAlter.Designer.cs">
+      <DependentUpon>Frm_PersonInfoAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\TeaManagerUI\Frm_TeaInfoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\TeaManagerUI\Frm_TeaInfoManager.Designer.cs">
+      <DependentUpon>Frm_TeaInfoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\UserUI\Frm_UserInfoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\UserUI\Frm_UserInfoManager.Designer.cs">
+      <DependentUpon>Frm_UserInfoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_BookTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\BookManagerUI\Frm_BookTypeManager.Designer.cs">
+      <DependentUpon>Frm_BookTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonTypeAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_PersonTypeAlter.Designer.cs">
+      <DependentUpon>Frm_PersonTypeAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_EquipTypeAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_EquipTypeAlter.Designer.cs">
+      <DependentUpon>Frm_EquipTypeAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_EquipTypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_EquipTypeManager.Designer.cs">
+      <DependentUpon>Frm_EquipTypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_RoomAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_RoomAlter.Designer.cs">
+      <DependentUpon>Frm_RoomAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_RoomManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMS_UI\Frm_RoomManager.Designer.cs">
+      <DependentUpon>Frm_RoomManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMS_BLL\BorrowReturn_BLL.cs" />
+    <Compile Include="RMS_BLL\BuildingInfo_BLL.cs" />
+    <Compile Include="RMS_BLL\DateBaseInfo_BLL.cs" />
+    <Compile Include="RMS_BLL\Department_BLL.cs" />
+    <Compile Include="RMS_BLL\EquipType_BLL.cs" />
+    <Compile Include="RMS_BLL\MatInfo_BLL.cs" />
+    <Compile Include="RMS_BLL\MatType_BLL.cs" />
+    <Compile Include="RMS_BLL\MatUnit_BLL.cs" />
+    <Compile Include="RMS_BLL\PersonInfo_BLL.cs" />
+    <Compile Include="RMS_BLL\UserType_BLL.cs" />
+    <Compile Include="RMS_BLL\Room_BLL.cs" />
+    <Compile Include="RMS_BLL\SecurityInfo_BLL.cs" />
+    <Compile Include="RMS_BLL\User_BLL.cs" />
+    <Compile Include="RMS_DAL\BorrowReturn_DAL.cs" />
+    <Compile Include="RMS_DAL\BuildingInfo_DAL.cs" />
+    <Compile Include="RMS_DAL\Class_DAL.cs" />
+    <Compile Include="RMS_DAL\DateBaseInfo_DAL.cs" />
+    <Compile Include="RMS_DAL\DBhelp.cs" />
+    <Compile Include="RMS_DAL\DeptInfo_DAL.cs" />
+    <Compile Include="RMS_DAL\EquipType_DAL.cs" />
+    <Compile Include="RMS_DAL\BookInfo_DAL.cs" />
+    <Compile Include="RMS_DAL\MatType_DAL.cs" />
+    <Compile Include="RMS_DAL\MatUnit_DAL.cs" />
+    <Compile Include="RMS_DAL\PersonInfo_DAL.cs" />
+    <Compile Include="RMS_DAL\UserType_DAL.cs" />
+    <Compile Include="RMS_DAL\Room_DAL.cs" />
+    <Compile Include="RMS_DAL\SecurityInfo_DAL.cs" />
+    <Compile Include="RMS_DAL\User_DAL.cs" />
+    <Compile Include="RMS_Model\BorrowReturn.cs" />
+    <Compile Include="RMS_Model\BuildingInfo.cs" />
+    <Compile Include="RMS_Model\Class.cs" />
+    <Compile Include="RMS_Model\Dept.cs" />
+    <Compile Include="RMS_Model\EnumTextByDescription.cs" />
+    <Compile Include="RMS_Model\Enum_Security.cs" />
+    <Compile Include="RMS_Model\EquipType.cs" />
+    <Compile Include="RMS_Model\BookModel\BookInfo_Table.cs" />
+    <Compile Include="RMS_Model\BookModel\BookInfo_View.cs" />
+    <Compile Include="RMS_Model\BookModel\BookType.cs" />
+    <Compile Include="RMS_Model\MatUnit.cs" />
+    <Compile Include="RMS_Model\PersonModel\PersonInfo.cs" />
+    <Compile Include="RMS_Model\UserModel\UserType.cs" />
+    <Compile Include="RMS_Model\Room.cs" />
+    <Compile Include="RMS_Model\SecurityInfo.cs" />
+    <Compile Include="RMS_Model\UserModel\User.cs" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.Add.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.AdminManager_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.BookInfoAdd_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.BookInfoExitRows_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.BookInfoExit_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.BookInfoManager_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.BorrowHostory_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.BorrowManager_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.Exit.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.FrmMain.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.Info_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.Login_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.ReaderAdd_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.ReaderExit_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\Library_UI.ReaderManager_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.BorrowHostory_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.BorrowManager_UI.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.CardInfo.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_BookInfoEdit.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_BookInfoManager.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_BookTypeAlter.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_BookTypeManager.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_BulkImportMatInfo.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_ChangeCoulumn.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_DairyInfoManager.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_EquipTypeAlter.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_EquipTypeManager.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_Login.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_Main.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_PersonInfoAdd.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_PersonInfoAlter.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_PersonInfoManager.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_PersonTypeAlter.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_PersonTypeManager.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_RoomAlter.resources" />
+    <EmbeddedResource Include="obj\x86\Debug\RMS.UI.Frm_RoomManager.resources" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BookInfoStatisticsUI\Frm_BookInfoStatistics_UI.resx">
+      <DependentUpon>Frm_BookInfoStatistics_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\ContactManagerUI\CardInfo.resx">
+      <DependentUpon>CardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\DairyManagerUI\Frm_DairyInfoManager.resx">
+      <DependentUpon>Frm_DairyInfoManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_BulkImportMatInfo.resx">
+      <DependentUpon>Frm_BulkImportMatInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_ChangeCoulumn.resx">
+      <DependentUpon>Frm_ChangeCoulumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BorrowHostory_UI.resx">
+      <DependentUpon>BorrowHostory_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BorrowManager_UI.resx">
+      <DependentUpon>BorrowManager_UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BookManagerUI\Frm_MatTypeAlter.resx">
+      <DependentUpon>Frm_MatTypeAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BookManagerUI\Frm_BookInfoEdit.resx">
+      <DependentUpon>Frm_BookInfoEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BookManagerUI\Frm_BookInfoManager.resx">
+      <DependentUpon>Frm_BookInfoManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_PersonTypeManager.resx">
+      <DependentUpon>Frm_PersonTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_PersonInfoAdd.resx">
+      <DependentUpon>Frm_PersonInfoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_PersonInfoAlter.resx">
+      <DependentUpon>Frm_PersonInfoAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\UserUI\Frm_UserInfoManager.resx">
+      <DependentUpon>Frm_UserInfoManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\BookManagerUI\Frm_BookTypeManager.resx">
+      <DependentUpon>Frm_BookTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_PersonTypeAlter.resx">
+      <DependentUpon>Frm_PersonTypeAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_EquipTypeAlter.resx">
+      <DependentUpon>Frm_EquipTypeAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_EquipTypeManager.resx">
+      <DependentUpon>Frm_EquipTypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_RoomAlter.resx">
+      <DependentUpon>Frm_RoomAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMS_UI\Frm_RoomManager.resx">
+      <DependentUpon>Frm_RoomManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Library_UI.vshost.exe.config" />
+    <None Include="bin\Debug\Library_UI.vshost.exe.manifest" />
+    <None Include="bin\Debug\RMS_UI.exe.config" />
+    <None Include="bin\Debug\RMS_UI.vshost.exe.config" />
+    <None Include="bin\Debug\RMS_UI.vshost.exe.manifest" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\x86\Debug\Library_UI.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Debug\Library_UI.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\RMS.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Debug\RMS.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\x86\Debug\资源管理信息系统.csproj.GenerateResource.Cache" />
+    <None Include="obj\x86\Debug\资源管理信息系统.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Interop.SQLDMO.dll" />
+    <Content Include="bin\Debug\RMS_BLL.dll" />
+    <Content Include="bin\Debug\RMS_Model.dll" />
+    <Content Include="bin\Debug\RMS_UI.exe" />
+    <Content Include="bin\Debug\RMS_UI.pdb" />
+    <Content Include="bin\Debug\RMS_UI.vshost.exe" />
+    <Content Include="bin\Debug\RongMIS.dll" />
+    <Content Include="bin\Debug\RongMIS.Sql.dll" />
+    <Content Include="obj\x86\Debug\Library_UI.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\RMS.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\RMS_UI.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\RMS_UI.exe" />
+    <Content Include="obj\x86\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\x86\Debug\资源管理信息系统.csproj.FileListAbsolute.txt" />
+    <Content Include="RMS_DLL\Interop.SQLDMO.dll" />
+    <Content Include="RMS_DLL\RongMIS.dll" />
+    <Content Include="RMS_DLL\RongMIS.Sql.dll" />
+    <Content Include="RMS_PNG\BookManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
