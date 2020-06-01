@@ -92,8 +92,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Com.cs" />
-    <Compile Include="Common\EnumEditOp.cs" />
+    <Compile Include="RMS_Common\Com.cs" />
+    <Compile Include="RMS_Common\EnumEditOp.cs" />
+    <Compile Include="RMS_Common\S_Constant.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -445,13 +446,11 @@
     <Content Include="obj\x86\Debug\RMS_UI.exe" />
     <Content Include="obj\x86\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
     <Content Include="obj\x86\Debug\资源管理信息系统.csproj.FileListAbsolute.txt" />
-    <Content Include="RMS_DLL\Interop.SQLDMO.dll" />
-    <Content Include="RMS_DLL\RongMIS.dll" />
-    <Content Include="RMS_DLL\RongMIS.Sql.dll" />
     <Content Include="RMS_PNG\BookManager.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+    <Folder Include="RMS_System\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
